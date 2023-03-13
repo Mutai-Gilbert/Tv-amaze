@@ -1,3 +1,31 @@
-body {
-  background-color: bisque;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap");
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+.nav-bar {
+  display: flex;
+  width: 500px;
+}
+
+.nav-container {
+  display: flex;
+  gap: 50px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.nav-items {
+  font-size: 20px;
+  text-decoration: none;
+  font-family: 'poppins', sans-serif;
+  color: #1a2236;
 }
