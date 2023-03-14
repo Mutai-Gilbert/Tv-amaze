@@ -1,26 +1,22 @@
 import './style.css';
-import moviesApi from './api.js';
 
 const displayMovies = async () => {
   const listOfMovies = document.getElementById('list-of-shows');
   listOfMovies.innerHTML = '';
 
-  moviesApi.forEach(async (item) => {
-    try {
-      const response = await fetch(item);
-      const data = await response.json();
-      if (!response.ok) {
-        listOfMovies.innerHTML = 'Server Down';
-      }
-      data.movie.forEach((item) => {
-        listOfMovies.innerHTML += `
+  const moviesApi = ('https://api.tvmaze.com/shows/1/episodes');
+
+  const response = await fetch(moviesApi);
+  const data = await response.json();
+  data.forEach((item) => {
+    listOfMovies.innerHTML += `
                     <section class="food_items flex">
                       <div class="">
-                        <span class="" id=${item.idMeal}>
+                        <span class="" id=${item.name}>
                         </span>
                       </div>
                       <div class="meal_image">
-                        <img class="meal_image" src="${item.strMealThumb}" alt="asdf">
+                        <img class="meal_image" src="${item.image.original}" alt="asdf">
                       </div>
                       <div class="flex actions_name">
                         <p class="meal">${item.strMeal}</p>
@@ -33,12 +29,7 @@ const displayMovies = async () => {
                       </div>
                       <div class="column flex">
                         <button class="button">Comments</button>
-                        <button class="button">Reservations</button>
                     </section>`;
-      });
-    } catch (err) {
-      listOfMovies.innerHTML = 'err';
-    }
   });
 };
 
