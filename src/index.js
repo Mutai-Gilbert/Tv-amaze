@@ -14,7 +14,7 @@ const displayMovies = async () => {
     }
     data.forEach((item) => {
       listOfMovies.innerHTML += `
-        <section class="show_items">
+        <section class="show_items flex">
           <div class="">
             <span class="" id=${item.id}>
             </span>
