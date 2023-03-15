@@ -1,3 +1,107 @@
-body {
-  background-color: bisque;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap");
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+.nav-bar {
+  display: flex;
+  width: 500px;
+}
+
+.nav-container {
+  display: flex;
+  gap: 50px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.nav-items {
+  font-size: 20px;
+  text-decoration: none;
+  font-family: 'poppins', sans-serif;
+  color: #1a2236;
+}
+
+.search-tv-shows {
+  display: flex;
+  margin: 40px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.column {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.link a {
+  color: rgba(206, 205, 205, 0.753);
+  text-decoration: none;
+}
+
+.show_items {
+  display: flex;
+  justify-content: center;
+  flex-basis: 30%;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#list-of-shows {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.actions_name {
+  gap: 75px;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  font-family: 'poppins', sans-serif;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.button {
+  padding: 5px;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.foot-item {
+  display: flex;
+  padding: 30px 60px;
+  align-items: center;
+}
+
+.foot-line {
+  border: 1px solid black;
+  margin-top: 20px;
 }
