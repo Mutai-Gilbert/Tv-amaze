@@ -3,31 +3,40 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-  width: 200px;
+  width: 150px;
   height: auto;
 }
 
 .nav-bar {
   display: flex;
-  width: 500px;
+  align-items: center;
 }
 
 .nav-container {
   display: flex;
-  gap: 50px;
-  text-decoration: none;
-  list-style-type: none;
+  gap: 30px;
+  list-style: none;
 }
 
 .nav-items {
-  font-size: 20px;
-  text-decoration: none;
-  font-family: 'poppins', sans-serif;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
   color: #1a2236;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-items:hover {
+  color: #ec1d24;
 }
 
 .search-tv-shows {
@@ -36,11 +45,21 @@
   align-items: center;
   justify-content: center;
 }
-input {
+
+input[type="text"] {
   height: 35px;
   width: 70%;
+  padding: 8px;
   border-radius: 8px;
-  border: 2px solid black;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: #1a2236;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #ec1d24;
 }
 
 .comment-button {
@@ -49,8 +68,9 @@ input {
 }
 
 main {
+  display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  justify-content: center;
   margin-top: 50px;
 }
 
@@ -61,6 +81,7 @@ main {
 
 .show_items {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   flex-basis: 30%;
   flex-direction: column;
