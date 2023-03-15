@@ -36,9 +36,14 @@
   align-items: center;
   justify-content: center;
 }
+input {
+  height: 35px;
+  width: 70%;
+  border-radius: 8px;
+  border: 2px solid black;
+}
 
-.column {
-  flex-direction: column;
+.comment-button {
   display: flex;
   align-items: center;
 }
@@ -72,8 +77,8 @@ main {
 .actions_name {
   gap: 75px;
   display: flex;
+  align-items: center;
   justify-content: space-around;
-  align-items: baseline;
   font-family: 'poppins', sans-serif;
 }
 
@@ -104,4 +109,10 @@ main {
 .foot-line {
   border: 1px solid black;
   margin-top: 20px;
+}
+
+/*  popup Windows  */
+
+.popIt {
+  background-color: blue;
 }
