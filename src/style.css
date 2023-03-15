@@ -114,5 +114,92 @@ main {
 /*  popup Windows  */
 
 .popIt {
-  background-color: blue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pop {
+  position: relative;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  max-width: 600px;
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+.popup_image {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.pop_image {
+  max-width: 100%;
+  max-height: 500px;
+  border-radius: 5px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.instructions {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.add-comm {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.submit-btn {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e90ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0071c5;
 }

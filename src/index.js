@@ -59,7 +59,7 @@ const displayMovies = async () => {
         popup.innerHTML = `
         <div class="popIt">
 
-        <div class="flex pop column">
+        <div class="pop">
 
           <span class="close-button">&times;</span>
 
