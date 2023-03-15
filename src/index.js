@@ -58,20 +58,29 @@ const displayMovies = async () => {
       const pop = () => {
         popup.innerHTML = `
         <div class="popIt">
+
         <div class="flex pop column">
+
           <span class="close-button">&times;</span>
-          <div class="popup_image">
+
+            <div class="popup_image">
             <img class="pop_image" src="${item.image.medium}" alt="asdf">
-          </div>
-          <p class="pop_meal">Name: ${item.name}</p>
-          <p>Ratings: ${item.rating.average}</p>
-          <p class="instructions">Airdate: ${item.airdate}</p>
-          <p>Runtime: ${item.runtime}</p>
-          <div class="comment_count"></div>
+            </div>
+
+               <p class="pop_meal">Name: ${item.name}</p>
+               <p>Ratings: ${item.rating.average}</p>
+               <p class="instructions">Airdate: ${item.airdate}</p>
+               <p>Runtime: ${item.runtime}</p>
+
+                 <div class="comment_count"></div>
+
           <button class="view_more">Refresh Comments</button>
+         
           <div class="pop_comment"></div>
           <div id="commentList"></div>
+
           <h3 class="add-comm">Add a comment</h3>
+
           <div class="inputDiv">
             <form class="form">
               <input id="name" type="text" name="user" required placeholder="Your Name"><br>
@@ -80,8 +89,10 @@ const displayMovies = async () => {
                 <button class="submit-btn" type="submit">Comment</button>
               </div>
             </form>
-          </div>
+           </div>
+
         </div>
+
       </div>
       `;
         popup.style.display = 'flex';
