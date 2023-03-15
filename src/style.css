@@ -30,8 +30,17 @@
   color: #1a2236;
 }
 
+.search-tv-shows {
+  display: flex;
+  margin: 40px 0;
+  align-items: center;
+  justify-content: center;
+}
+
 .column {
   flex-direction: column;
+  display: flex;
+  align-items: center;
 }
 
 main {
@@ -46,6 +55,7 @@ main {
 }
 
 .show_items {
+  display: flex;
   justify-content: center;
   flex-basis: 30%;
   flex-direction: column;
@@ -54,16 +64,24 @@ main {
   margin-bottom: 20px;
 }
 
-.show_image {
-  width: 200px;
-}
-
-.flex {
+#list-of-shows {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .actions_name {
-  gap: 10px;
+  gap: 75px;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  font-family: 'poppins', sans-serif;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .movie {

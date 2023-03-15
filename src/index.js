@@ -14,7 +14,7 @@ const displayMovies = async () => {
     }
     data.forEach((item) => {
       listOfMovies.innerHTML += `
-        <section class="show_items flex">
+        <section class="show_items">
           <div class="">
             <span class="" id=${item.id}>
             </span>
@@ -22,18 +22,17 @@ const displayMovies = async () => {
           <div class="show_image">
             <img class="movie_image" src="${item.image.medium}" alt="${item.name}">
           </div>
-          <div class="flex actions_name">
+          <div class="actions_name">
             <p class="movie">${item.name}</p>
-            <div>
+            <div class="icon">
               <i class="fa-solid fa-heart"></i>
               <span>
                 <p>2 likes</p>
               </span>
             </div>
           </div>
-          <div class="column flex">
+          <div class="column">
             <button class="button">Comments</button>
-            <button class="button">Reservations</button>
           </div>
         </section>`;
     });
