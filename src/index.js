@@ -101,5 +101,10 @@ const displayMovies = async () => {
       pop();
     });
   });
+  // const close = document.querySelector('.close-button');
+  // close.addEventListener('click', () => {
+  //   popup.style.display = 'none';
+  //   document.body.style.overflow = 'auto';
+  // });
 };
 displayMovies();
