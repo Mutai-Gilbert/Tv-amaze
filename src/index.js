@@ -1,5 +1,6 @@
 import './style.css';
 import api from './modules/api.js';
+import Comment from './modules/comments.js';
 
 const displayMovies = async () => {
   const listOfMovies = document.getElementById('list-of-shows');
@@ -84,7 +85,7 @@ const displayMovies = async () => {
           <div class="inputDiv">
             <form class="form">
               <input id="name" type="text" name="user" required placeholder="Your Name"><br>
-              <textarea id="text" type="text" rows="6" name="text" required placeholder="Your insight"></textarea><br>
+              <textarea id="text" type="text" name="text" required placeholder="Your insight"></textarea><br>
               <div>
                 <button class="submit-btn" type="submit">Comment</button>
               </div>
@@ -99,12 +100,60 @@ const displayMovies = async () => {
         document.body.style.overflow = 'hidden';
       };
       pop();
+      const close = document.querySelector('.close-button');
+      close.addEventListener('click', () => {
+        popup.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      });
+      const commentCount = document.querySelector('.comment_count');
+      const commentPop = document.querySelector('.pop_comment');
+
+      const comment = async (username, comment) => {
+        const comments = new Comment(username, comment, item.id);
+        const response = await fetch(api.commentUrl, {
+          method: 'POST',
+          headers: { 'Content-type': 'application/json' },
+          body: JSON.stringify(comments),
+        });
+        const data = response;
+        return data;
+      };
+      const commentDisplay = async (gameData) => {
+        commentPop.innerHTML = '';
+        const displayComments = gameData.map((list) => ` <div class="new_list">
+                                                              <p> ${list.creation_date} </p>
+                                                              <p> ${list.username} </p>
+                                                              <p> ${list.comment} </p>
+                                                            </div>
+        `).join('');
+        commentPop.innerHTML = displayComments;
+      };
+      const getComments = async (id) => {
+        const response = await fetch(`${api.commentUrl}?item_id=${id}`);
+        const data = await response.json();
+        if (response.ok) {
+          commentDisplay(data);
+          commentCount.innerHTML = `Comments: ${data.length}`;
+        }
+      };
+      const name = document.querySelector('#name');
+      const text = document.querySelector('#text');
+      const clearInput = () => {
+        name.value = '';
+        text.value = '';
+      };
+
+      const form = document.querySelector('.form');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const namess = document.querySelector('#name').value;
+        const textss = document.querySelector('#text').value;
+        comment(namess, textss);
+        clearInput();
+        getComments(item.id);
+      });
     });
   });
-  // const close = document.querySelector('.close-button');
-  // close.addEventListener('click', () => {
-  //   popup.style.display = 'none';
-  //   document.body.style.overflow = 'auto';
-  // });
 };
 displayMovies();
