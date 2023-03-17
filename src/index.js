@@ -1,67 +1,71 @@
-import "./style.css";
-import api from "./modules/api.js";
-import addLike from "./modules/like.js";
+import './style.css';
+import api from './modules/api.js';
+import addLike from './modules/like.js';
 import Comment from './modules/comments.js';
 
-
 const displayMovies = async () => {
-  const listOfMovies = document.getElementById("list-of-shows");
-  const popup = document.querySelector(".popup-comments");
+  const listOfMovies = document.getElementById('list-of-shows');
+  const popup = document.querySelector('.popup-comments');
+  const countMovies = document.querySelector('.count-movies');
 
-  listOfMovies.innerHTML = "";
+  listOfMovies.innerHTML = '';
 
   const response = await fetch(api.moviesApi);
   const data = await response.json();
   if (!response.ok) {
-    listOfMovies.innerText = "Server Down";
+    listOfMovies.innerText = 'Server Down';
     return;
   }
-  console.log("data", data);
 
   const likesResponse = await fetch(`${api.likesUrl}`);
   const likesData = await likesResponse.json();
-  console.log("Get likes", likesData);
 
   data.forEach((tvObj) => {
     likesData.forEach((likesObj) => {
       if (tvObj.id === likesObj.item_id) tvObj.likes = likesObj.likes;
     });
   });
+
+  // Total Movies
+  const numberOfMovies = document.createElement('span');
+  numberOfMovies.innerHTML = `(${data.length})`;
+  countMovies.append(numberOfMovies);
+
   data.forEach((item) => {
-    const section = document.createElement("section");
-    section.classList.add("show_items");
-    section.setAttribute("id", item.id);
-    const divImg = document.createElement("div");
-    divImg.classList.add("show_image");
+    const section = document.createElement('section');
+    section.classList.add('show_items');
+    section.setAttribute('id', item.id);
+    const divImg = document.createElement('div');
+    divImg.classList.add('show_image');
 
-    const movieImg = document.createElement("div");
+    const movieImg = document.createElement('div');
     movieImg.innerHTML = ` <img class="movie_image" src="${item.image.medium}" alt="${item.name}">`;
-    const twoDiv = document.createElement("div");
-    twoDiv.classList.add("actions_name");
-    const movieName = document.createElement("p");
+    const twoDiv = document.createElement('div');
+    twoDiv.classList.add('actions_name');
+    const movieName = document.createElement('p');
     movieName.innerHTML = `${item.name}`;
-    movieName.classList.add("movie");
-    let currentLikes = item.likes || 0;
-    const divIcon = document.createElement("div");
-    divIcon.classList.add("icon");
+    movieName.classList.add('movie');
+    const currentLikes = item.likes || 0;
+    const divIcon = document.createElement('div');
+    divIcon.classList.add('icon');
 
-    const spanClick = document.createElement("span");
-    spanClick.classList.add("clickable");
+    const spanClick = document.createElement('span');
+    spanClick.classList.add('clickable');
 
-    const likes = document.createElement("i");
-    likes.innerHTML = `<i class="fa-solid fa-heart"></i>`;
+    const likes = document.createElement('i');
+    likes.innerHTML = '<i class="fa-solid fa-heart"></i>';
 
-    const countLikes = document.createElement("p");
+    const countLikes = document.createElement('p');
     countLikes.innerText = `${currentLikes} Likes`;
 
-    likes.addEventListener("click", async () => {
+    likes.addEventListener('click', async () => {
       await addLike(item.id);
     });
-    const commentBtn = document.createElement("div");
-    commentBtn.classList.add("comment-button");
-    const btn = document.createElement("button");
-    btn.innerText = "Comments";
-    btn.classList.add("button");
+    const commentBtn = document.createElement('div');
+    commentBtn.classList.add('comment-button');
+    const btn = document.createElement('button');
+    btn.innerText = 'Comments';
+    btn.classList.add('button');
 
     commentBtn.append(btn);
     divIcon.append(spanClick, likes, countLikes);
@@ -72,7 +76,7 @@ const displayMovies = async () => {
     listOfMovies.append(section);
 
     // adding event listener to the button
-    btn.addEventListener("click", () => {
+    btn.addEventListener('click', () => {
       const pop = () => {
         popup.innerHTML = `
         <div class="popIt">
@@ -113,8 +117,8 @@ const displayMovies = async () => {
 
       </div>
       `;
-        popup.style.display = "flex";
-        document.body.style.overflow = "hidden";
+        popup.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
       };
       pop();
       const close = document.querySelector('.close-button');
@@ -196,4 +200,3 @@ const displayMovies = async () => {
 };
 
 export default displayMovies();
-
