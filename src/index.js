@@ -145,7 +145,7 @@ const displayMovies = async () => {
         }
       };
 
-      // Take the comments from the input section
+      // The form comments from the input section
 
       const name = document.querySelector('#name');
       const text = document.querySelector('#text');
