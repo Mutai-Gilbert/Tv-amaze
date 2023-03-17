@@ -17,6 +17,8 @@ const displayMovies = async () => {
     listOfMovies.innerText = 'Server Down';
     return;
   }
+
+  // Implementing the items counter
   const moviesCount = document.createElement('span');
   moviesCount.innerHTML = `(${data.length})`;
 
