@@ -6,6 +6,9 @@ const displayMovies = async () => {
   const listOfMovies = document.getElementById('list-of-shows');
   const popup = document.querySelector('.popup-comments');
 
+  // count Movies
+  const totalMovies = document.querySelector('.count-movies');
+
   listOfMovies.innerHTML = '';
 
   const response = await fetch(api.moviesApi);
@@ -14,6 +17,11 @@ const displayMovies = async () => {
     listOfMovies.innerText = 'Server Down';
     return;
   }
+  const moviesCount = document.createElement('span');
+  moviesCount.innerHTML = `(${data.length})`;
+
+  totalMovies.append(moviesCount);
+
   data.forEach((item) => {
     const section = document.createElement('section');
     section.classList.add('show_items');
