@@ -1,4 +1,4 @@
-const commentKey = 'HJ3nJrQxKFWMKnh6RtwV';
+const commentKey = 'MMc1FmLd80mPmHV1mx1Z';
 const commentUrl = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${commentKey}/comments`;
 
 const likesApi = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
