@@ -164,7 +164,17 @@ const displayMovies = async () => {
         clearInput();
         getComments(item.id);
       });
+      form.addEventListener('focusout', () => {
+        getComments(item.id);
+      });
+      window.addEventListener('mouseover', () => {
+        getComments(item.id);
+      });
+      const viewMore = document.querySelector('.view_more');
+      viewMore.addEventListener('click', () => {
+        getComments(item.id);
+      });
     });
   });
 };
-displayMovies();
+export default displayMovies();
