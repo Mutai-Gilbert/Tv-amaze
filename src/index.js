@@ -108,26 +108,34 @@ const displayMovies = async () => {
       const commentCount = document.querySelector('.comment_count');
       const commentPop = document.querySelector('.pop_comment');
 
+      // Post to the api the comments
+
       const comment = async (username, comment) => {
         const comments = new Comment(username, comment, item.id);
         const response = await fetch(api.commentUrl, {
           method: 'POST',
-          headers: { 'Content-type': 'application/json' },
+          headers: { 'content-type': 'application/json' },
           body: JSON.stringify(comments),
         });
         const data = response;
         return data;
       };
+
+      // Display the comments from the api
       const commentDisplay = async (gameData) => {
         commentPop.innerHTML = '';
         const displayComments = gameData.map((list) => ` <div class="new_list">
-                                                              <p> ${list.creation_date} </p>
+                                                             <strong> <p> ${list.creation_date} </p> </strong>
+                                                              <div class="comment-initials">
                                                               <p> ${list.username} </p>
                                                               <p> ${list.comment} </p>
+                                                              </div>
                                                             </div>
         `).join('');
         commentPop.innerHTML = displayComments;
       };
+
+      // Get the comments
       const getComments = async (id) => {
         const response = await fetch(`${api.commentUrl}?item_id=${id}`);
         const data = await response.json();
@@ -136,6 +144,9 @@ const displayMovies = async () => {
           commentCount.innerHTML = `Comments: ${data.length}`;
         }
       };
+
+      // Take the comments from the input section
+
       const name = document.querySelector('#name');
       const text = document.querySelector('#text');
       const clearInput = () => {

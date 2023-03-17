@@ -181,6 +181,38 @@ main {
   font-weight: bold;
 }
 
+.view_more {
+  padding: 5px;
+  font-size: 15px;
+  margin: 12px;
+  background-color: #1a2236;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pop_comment {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: beige;
+  padding: 5px;
+}
+
+.new_list {
+  margin: 0;
+  padding: 0;
+}
+
+.comment-initials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .add-comm {
   margin-top: 20px;
   font-weight: bold;
