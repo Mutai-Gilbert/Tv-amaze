@@ -1,173 +1,83 @@
-<a name="readme-top"></a>
+# Project Name 
+Capstone: API-based Webapp
 
-<div align="center">
+# Description of project.
+The JavaScript capstone project is about building  web application based on an external API. We selected an API that provides data about Movies and then built the webapp around it.
 
-  <img src="assets-README/kefi-Unearthed-5.png" alt="logo" width="280"  height="auto" />
-    <h3><b>Anna Petras for KING YESHUA - Kefi Unearthed</b></h3>
-  <br/>
-💜
-  <h3><b>Personal README Template</b></h3>
-  <br/>
-  
-</div>
-
-<!-- TABLE OF CONTENTS -->
-
-# 📗 Table of Contents
-
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
-- [📝 License](#license)
-
-<br>
-
-<!-- PROJECT DESCRIPTION -->
-
-# 📖 NAME OF PROJECT<a name="about-project"></a>
-
-**Name of Project** is a project ...complete sentence
-
-<br>
-
-## 🛠 Built With <a name="built-with"></a>
-    HTML
-    CSS
-    Javascript (ES6)
-    Webpack
-    Linters
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Project Demo Image
-<br>
-<img align="center" src="assets-README/project_demo.png" alt="logo" width="100%"  height="auto" />
-
-  <br/>
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-[Name of Project](https://ADD LINK.git)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Project description video link:
+[video link](https://youtu.be/FgK-wuXRoEE)
 
 
-## 💻 Getting Started <a name="getting-started"></a>
+## Project web demo link. 
 
-- Create a local directory that you want to clone the repository.
+## Built With 
+- Html. 
+- Css. 
+- JS.
+- Webpark.
+- jest test
 
-- Open the command prompt in the created directory.
+Website link: 
+https://mutai-gilbert.github.io/TVamaze-API-based-webapp/dist/
 
-- On the terminal run this command git clone `https://github.com/annaeliana7/ADD LINK.git`
+# Getting starting 
+To get a local copy up and running follow these simple example steps:
 
-- Go to the repository folder using command prompt cd `NAME OF PROJECT`
-
-- Install the dev dependencies for linters run npm install.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Prerequisites
-
-In order to run this project you need:
-
--Any broswer
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Prerequisites
+ Vscode. 
+ must have git installed.
 
 ### Setup
+If you installed git you can clone the code to your machine, or download a ZIP of all the files directly.
 
-Clone this repository to your desired folder:
+[Download the ZIP from this location], or run the following [git](https://git-scm.com/downloads) command to clone the files to your machine:
 
-- Open the command prompt in the created directory.
+git clone  https://github.com/Mutai-Gilbert/TVamaze-API-based-webapp
+- Once the files are on your machine, open the _todo-list_ folder in [Visual Studio Code](https://code.visualstudio.com/), and follow the steps in Installation & Set Up
 
-- On the terminal run this command git clone https://ADD LINK.git
+## 🛠 Installation & Set Up
 
-- Go to the repository folder using command prompt cd NAME-OF-FILE
+1. Install Node Modules
 
-- Install the dev dependencies for linters run npm install.
---->
+   npm install
+   
+   2. Start the development server
 
+   npm run start
+3. Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+4. Run automated functionality test
+To check for functionality with automated test run npm test
 
-<!-- Author -->
+## 🚀 Building and Running for Production
 
-👤 **Author**
-Anna Petras
+1. Generate a full static production build
 
-- GitHub: [@annaeliana7](https://github.com/annaeliana7)
+   npm run build
 
+## Author 1
+👤 **Gilbert Mutai**
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- GitHub: [@githubhandle](https://github.com/Mutai-Gilbert)
+- Twitter: [@twitterhandle](https://twitter.com/@nerdmutai)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mutai-gilbert-2a5a42137/)
+## Authors
 
+👤 **Ntwali Roland**
 
-## 🔭 Future Features <a name="future-features"></a>
+- GitHub: [@Roland-Ntwali](https://github.com/Roland-Ntwali)
+- LinkedIn: [Roland Ntwali](https://www.linkedin.com/in/roland-ntwali-11b16617b/)
 
-- Implement some UX improvements: added transitions and/or animation.
+# 🤝 Contributing
+ Contributions, issues, and feature requests are welcome! Feel free to check the [issues page]Fork the Project Create your Feature Branch (git checkout -b 'branchname') Commit your Changes (git commit -m 'Add some branchname') Push to the Branch (git push origin branchname) Open a Pull Request Feel free to check the
 
-- Implement additional pages.
+ ## Deployment
+  Push changes to a branch. Wait for the build to pass on our CI server. Tell Hubot to deploy it. Verify that the changes work and fix any problems that come up. Merge the branch into master.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-## 🤝 Contributing <a name="contributing"></a>
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](https://ADD LINK.git).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-## ⭐️ Show your support <a name="support"></a>
-
+## Show your support 
 Give a ⭐️ if you like this project!
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Acknowledgments 
+MICROVERSE and My Team.
 
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-💜 HaShem (Abba) and Yeshua, I LOVE YOU! 💜 Thank you!
-I HONOR + GLORIFY YOU FOREVER ... 💜
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-## 📝 License <a name="license"></a>
-
-This project is [MIT](./LICENSE) licensed.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<br>
-
-
-<!-- Author's message -->
-
-<div align="center">
-    <img src="assets-README/kefi-Unearthed-5.png"  alt="logo" width="250"  height="auto" />
-    <h3><b>Anna Petras for KING YESHUA - Kefi Unearthed</b></h3>
-💜
-<br>
-💜
-<br>
-💜
-<br>
-PETRAS FAMILY
+This project is MIT licensed.

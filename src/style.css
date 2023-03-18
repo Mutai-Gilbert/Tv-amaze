@@ -1,3 +1,256 @@
-body {
-  background-color: bisque;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&display=swap");
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.nav-bar {
+  display: flex;
+  width: 60%;
+}
+
+.nav-container {
+  display: flex;
+  gap: 30px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.nav-items {
+  font-size: 18px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  color: #1a2236;
+}
+
+.search-tv-shows {
+  display: flex;
+  margin: 40px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="search"] {
+  height: 35px;
+  width: 70%;
+  border-radius: 8px;
+  border: 2px solid black;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.comment-button {
+  display: flex;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.link a {
+  color: rgba(206, 205, 205, 0.753);
+  text-decoration: none;
+}
+
+.show_items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#list-of-shows {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 10%;
+}
+
+.actions_name {
+  gap: 50px;
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie {
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.button {
+  padding: 5px;
+  font-size: 15px;
+  margin-top: 10px;
+  background-color: #1a2236;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #354c7d;
+}
+
+.foot-item {
+  display: flex;
+  padding: 30px 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.foot-line {
+  border: 1px solid black;
+  margin-top: 20px;
+}
+
+/*  popup Windows  */
+
+.popIt {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pop {
+  position: relative;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  max-width: 600px;
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+.popup_image {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.pop_image {
+  max-width: 100%;
+  max-height: 500px;
+  border-radius: 5px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.instructions {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.view_more {
+  padding: 5px;
+  font-size: 15px;
+  margin: 12px;
+  background-color: #1a2236;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pop_comment {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: beige;
+  padding: 5px;
+}
+
+.new_list {
+  margin: 0;
+  padding: 0;
+}
+
+.comment-initials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.add-comm {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.submit-btn {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e90ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0071c5;
 }
