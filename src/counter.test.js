@@ -1,4 +1,4 @@
-const { displayMovies } = require('./index.js');
+const { displayMovies } = require('./index2.js');
 const { addMoviesCounter } = require('./modules/counter.js');
 
 describe('Items Count', () => {
