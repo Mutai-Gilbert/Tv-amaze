@@ -9,7 +9,8 @@ const addLike = async (id) => {
     });
 
     window.location.reload();
-  } catch (error) { // eslint-disable-next-line
+  } catch (error) {
+    // eslint-disable-next-line no-console
     console.error(error);
   }
 };
