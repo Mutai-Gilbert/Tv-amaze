@@ -1,14 +1,29 @@
-// modules/getComments.js
-
-import api from './api.js';
+const comments = [
+  {
+    id: 1,
+    item_id: 123,
+    username: 'user1',
+    comment: 'comment 1',
+  },
+  {
+    id: 2,
+    item_id: 123,
+    username: 'user2',
+    comment: 'comment 2',
+  },
+  {
+    id: 3,
+    item_id: 123,
+    username: 'user3',
+    comment: 'comment 3',
+  },
+];
 
 const getComments = async (id) => {
-  const response = await fetch(`${api.commentUrl}?item_id=${id}`);
-  const data = await response.json();
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
+  if (id === 123) {
+    return comments;
   }
-  return data;
+  return [];
 };
 
-export default getComments();
+module.exports = getComments;
