@@ -18,6 +18,7 @@ The JavaScript capstone project is about building  web application based on an e
 - jest test
 
 Website link: 
+https://mutai-gilbert.github.io/TVamaze-API-based-webapp/dist/
 
 # Getting starting 
 To get a local copy up and running follow these simple example steps:
