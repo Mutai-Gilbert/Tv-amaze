@@ -47,5 +47,8 @@
     "webpack": "^5.76.2",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.1"
   }
 }
