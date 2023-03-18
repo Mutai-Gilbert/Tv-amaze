@@ -2,11 +2,11 @@ import './style.css';
 import api from './modules/api.js';
 import addLike from './modules/like.js';
 import Comment from './modules/comments.js';
+import addMoviesCounter from './modules/counter.js';
 
 const displayMovies = async () => {
   const listOfMovies = document.getElementById('list-of-shows');
   const popup = document.querySelector('.popup-comments');
-  const countMovies = document.querySelector('.count-movies');
 
   listOfMovies.innerHTML = '';
 
@@ -27,9 +27,7 @@ const displayMovies = async () => {
   });
 
   // Total Movies
-  const numberOfMovies = document.createElement('span');
-  numberOfMovies.innerHTML = `(${data.length})`;
-  countMovies.append(numberOfMovies);
+  addMoviesCounter(data);
 
   data.forEach((item) => {
     const section = document.createElement('section');
