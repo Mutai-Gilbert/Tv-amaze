@@ -5,7 +5,7 @@ Capstone: API-based Webapp
 The JavaScript capstone project is about building  web application based on an external API. We selected an API that provides data about Movies and then built the webapp around it.
 
 ## Project description video link:
-[video link]()
+[video link](https://youtu.be/FgK-wuXRoEE)
 
 
 ## Project web demo link. 
