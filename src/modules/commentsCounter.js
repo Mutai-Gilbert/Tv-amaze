@@ -1,3 +1,8 @@
+import displayMovies from '../index2.js';
+
+const movies = displayMovies();
+const comment = await movies.getComments();
+
 const comments = [
   {
     id: 1,
